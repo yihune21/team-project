@@ -26,7 +26,7 @@ Team Projects that developed by sn3y team
    ```
 
    ```bash
-   cd space-news-aggregator
+   cd team-project
    ```
 
    ```bash
