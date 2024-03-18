@@ -29,30 +29,8 @@ Team Projects that developed by sn3y team
    cd team-project
    ```
 
-   ```bash
-   cd api
-   ```
-
 2. Install dependencies:
 
    ```bash
-   npm install
+   npm install 
    ```
-
-3. Set up the environment variables:
-
-   ```bash
-   cp .env.example .env
-   ```
-
-   Then edit the .env file and add the required information.
-
-4. Run the application:
-
-   ```bash
-   npm run dev
-   ```
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
