@@ -18,11 +18,11 @@ app.get("/QRScanner", (req: any, res: any) => {
   res.send("This is the QRScanner page");
 });
 
-app.get("/contactus", (req: any, res: any) => {
+app.get("/contact", (req: any, res: any) => {
   res.send("This is the contact page");
 });
 
-app.get("/aboutus", (req: any, res: any) => {
+app.get("/about", (req: any, res: any) => {
   res.send("This is the about us page");
 });
 
