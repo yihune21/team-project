@@ -16,7 +16,8 @@ Team Projects that developed by sn3y team
 - Node.js
 - Express.js
 - MongoDB
-
+- TypeScript
+  
 ## Installation
 
 1. Clone the repository:
