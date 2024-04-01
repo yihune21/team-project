@@ -2,7 +2,7 @@
   "name": "team-project",
   "version": "1.0.0",
   "description": "Team Projects that developed by sn3y team",
-  "main": "index.js",
+  "main": "dist/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
