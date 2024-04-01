@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 // Example usage
-export async function start() {
+async function start() {
   await // Connect to MongoDB
   mongoose
     .connect("mongodb://localhost:27017/team-project-db")
