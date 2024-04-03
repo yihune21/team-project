@@ -1,9 +1,10 @@
 const mongoose = require("mongoose");
+const passportLocalMongoose = require("passport-local-mongoose");
+
 //Define a user schema for the MongoDB collection
 const userSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: true,
   },
   email: {
     type: String,
@@ -12,11 +13,11 @@ const userSchema = new mongoose.Schema({
   },
   password: {
     type: String,
-    required: true,
   },
 });
 
-// Define a user model based on the user schema
+userSchema.plugin(passportLocalMongoose, { usernameField: "email" });
+
 const User = mongoose.model("User", userSchema);
 
 export default User;
