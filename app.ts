@@ -9,20 +9,27 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(
   session({
-    secret: "secret",
-    resave: false,
-    saveUninitialized: false,
+    secret: "secret", //This is a secret key used to sign the session ID cookie
+    resave: false, //This option forces the session to be saved back to the session store
+    saveUninitialized: false, //This option forces a session that is "uninitialized"(new) to be saved to the store
   })
 );
 
+// initialize the passport
 app.use(passport.initialize());
 app.use(passport.session());
+
 // Start the database connection
 start();
 
+// Import the user model
 import User from "./models/userModel";
-
-// Define a user model based on the user schema
+/*
+The passport will maintain persistent login sessions. 
+In order for persistent sessions to work in the passport, 
+the authenticated user must be serialized to the session
+and deserialized when subsequent requests are made.
+*/
 passport.use(User.createStrategy());
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
